@@ -31,7 +31,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker pull gentoo/stage3
-          docker login --username=rockylinux --passwd='kindlekindle1' registry.cn-guangzhou.aliyuncs.com
+          docker login --username=${{ secrets.USR }} --passwd=${{ secrets.PSW }} registry.cn-guangzhou.aliyuncs.com
           docker tag gentoo/stage3 registry.cn-guangzhou.aliyuncs.com/gentoo/abc:latest
           docker push registry.cn-guangzhou.aliyuncs.com/gentoo/abc:latest
 
