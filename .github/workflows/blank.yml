@@ -32,6 +32,6 @@ jobs:
         run: |
           docker pull arm64v8/centos
           docker login --username=${{ secrets.USR }} --password=${{ secrets.PSW }} registry.cn-guangzhou.aliyuncs.com
-          docker tag centos registry.cn-guangzhou.aliyuncs.com/gentoo/abc:centos
+          docker tag arm64v8/centos registry.cn-guangzhou.aliyuncs.com/gentoo/abc:centos
           docker push registry.cn-guangzhou.aliyuncs.com/gentoo/abc:centos
 
